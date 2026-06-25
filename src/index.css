@@ -1,0 +1,14 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* 
+  In Tailwind v4, custom theme extensions are declared 
+  directly in CSS instead of a tailwind.config.js file:
+*/
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --color-brand-primary: #0f172a;
+  /* Slate 900 */
+}
+
+

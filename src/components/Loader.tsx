@@ -1,0 +1,5 @@
+export const Loader = () => (
+  <div className="flex justify-center items-center py-12">
+    <div className="w-8 h-8 border-2 border-slate-900 border-t-transparent rounded-full animate-spin" />
+  </div>
+);
