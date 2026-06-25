@@ -29,13 +29,13 @@ async function request(
   });
 
   // GLOBAL 401 HANDLING
-  if (response.status === 401) {
-    localStorage.removeItem("hp_token");
-    localStorage.removeItem("hp_user");
-    // Force redirect to login
-    window.location.href = "/login";
-    throw new Error("Unauthorized: Session expired.");
-  }
+  // if (response.status === 401) {
+  //   localStorage.removeItem("hp_token");
+  //   localStorage.removeItem("hp_user");
+  //   // Force redirect to login
+  //   window.location.href = "/login";
+  //   throw new Error("Unauthorized: Session expired.");
+  // }
 
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
