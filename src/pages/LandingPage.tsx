@@ -407,6 +407,78 @@ export const LandingPage = () => {
             </div>
           </div>
         </div>
+
+        {/* Additional Testimonial 4 */}
+        <div className="bg-[#112240] p-6 rounded flex flex-col justify-between relative hover:border-[#c5a059]/30 border border-transparent transition-all">
+          <Quote className="absolute top-6 right-6 text-[#020c1b]/40 h-10 w-10 pointer-events-none" />
+          <div className="space-y-4 relative z-10">
+            <div className="flex text-[#c5a059] gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={11} fill="currentColor" />
+              ))}
+            </div>
+            <p className="text-xs text-[#e6f1ff] leading-relaxed font-medium italic">
+              "Their forensic audit revealed inconsistencies in our ledger that
+              bypassed standard reconciliation tools. An essential asset for
+              complex financial integrity."
+            </p>
+          </div>
+          <div className="border-t border-[#020c1b]/30 pt-4 mt-6 flex items-center justify-between text-[11px]">
+            <span className="font-bold text-[#e6f1ff]">
+              Vector Capital Partners
+            </span>
+            <div className="border-t border-[#020c1b]/30 pt-4 mt-6 flex items-center justify-between text-[11px]">
+              <span className="font-bold text-[#e6f1ff]">
+                Nexus Global Trade
+              </span>
+              <span className="font-mono text-[#c5a059]">Recovered $700k</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Testimonial 5 */}
+        <div className="bg-[#112240] p-6 rounded flex flex-col justify-between relative hover:border-[#c5a059]/30 border border-transparent transition-all">
+          <Quote className="absolute top-6 right-6 text-[#020c1b]/40 h-10 w-10 pointer-events-none" />
+          <div className="space-y-4 relative z-10">
+            <div className="flex text-[#c5a059] gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={11} fill="currentColor" />
+              ))}
+            </div>
+            <p className="text-xs text-[#e6f1ff] leading-relaxed font-medium italic">
+              "The precision in their forensic report allowed us to settle a
+              three-year dispute in months. The depth of their digital
+              investigation is unmatched."
+            </p>
+          </div>
+          <div className="border-t border-[#020c1b]/30 pt-4 mt-6 flex items-center justify-between text-[11px]">
+            <span className="font-bold text-[#e6f1ff]">Sarah J.</span>
+            <span className="font-mono text-[#c5a059]">
+              Private Equity Lead
+            </span>
+          </div>
+        </div>
+
+        {/* Additional Testimonial 6 */}
+        <div className="bg-[#112240] p-6 rounded flex flex-col justify-between relative hover:border-[#c5a059]/30 border border-transparent transition-all">
+          <Quote className="absolute top-6 right-6 text-[#020c1b]/40 h-10 w-10 pointer-events-none" />
+          <div className="space-y-4 relative z-10">
+            <div className="flex text-[#c5a059] gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={11} fill="currentColor" />
+              ))}
+            </div>
+            <p className="text-xs text-[#e6f1ff] leading-relaxed font-medium italic">
+              "Seamless integration with our workflow. ApexForensics turned raw,
+              fragmented transaction logs into a clear, admissible evidence
+              trail."
+            </p>
+          </div>
+          <div className="border-t border-[#020c1b]/30 pt-4 mt-6 flex items-center justify-between text-[11px]">
+            <span className="font-bold text-[#e6f1ff]">Nexus Global Trade</span>
+            <span className="font-mono text-[#c5a059]">Recovered $1.23m</span>
+          </div>
+        </div>
       </section>
 
       {/* 📄 Institutional FAQ Block */}
