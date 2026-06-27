@@ -24,7 +24,7 @@ interface ChatThread {
 }
 
 export const Dashboard = () => {
-  const { token } = useAuth();
+  const { user, token } = useAuth();
   const [claims, setClaims] = useState<Claim[]>([]);
   const [threads, setThreads] = useState<ChatThread[]>([]);
   const [activeContext, setActiveContext] = useState<{
@@ -32,7 +32,6 @@ export const Dashboard = () => {
     claimId: string;
   } | null>(null);
 
-  
   const [toast, setToast] = useState<{
     message: string;
     type: "success" | "error";
@@ -56,7 +55,10 @@ export const Dashboard = () => {
 
   const syncDashboard = async () => {
     try {
-      const claimsPayload = await apiService.getClaims(token!);
+      const claimsPayload = await apiService.getClaimsByClientId(
+        user!.id,
+        token!,
+      );
       const threadsPayload = await apiService.getThreads(token!);
       setClaims(claimsPayload);
       setThreads(threadsPayload);
@@ -72,7 +74,10 @@ export const Dashboard = () => {
 
     const runSync = async () => {
       try {
-        const claimsPayload = await apiService.getClaims(token);
+        const claimsPayload = await apiService.getClaimsByClientId(
+          user!.id,
+          token!,
+        );
         const threadsPayload = await apiService.getThreads(token);
 
         if (isMounted) {

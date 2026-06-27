@@ -87,6 +87,10 @@ export const apiService = {
     return request("/claims", { method: "GET" }, token);
   },
 
+  async getClaimsByClientId(clientId: string, token: string) {
+    return request(`/claims/${clientId}`, { method: "GET" }, token);
+  },
+
   async updateClaim(token: string, claimId: string, status: string) {
     return request(
       `/claims/${claimId}`,
